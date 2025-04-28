@@ -9,11 +9,13 @@ for name, link in pairs(url) do
   print(name)
 end
 
-print("insert package name")
+print("Insert package name:")
 local name = read()
 
 print("Install " .. name .. " as startup.lua? (y/n)")
-if read() == "y" then
+local confirm = read()
+
+if confirm == "y" then
   if fs.exists("startup.lua") then
     fs.delete("startup.lua")
   end
