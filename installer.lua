@@ -17,6 +17,7 @@ if read() == "y" then
   if fs.exists("startup.lua") then
     fs.delete("startup.lua")
   end
+  shell.run("pastebin", "get", "E3VPCMnz", "mirror.lua")
   shell.run("wget", url[name], "startup.lua")
   print("Done.")
 else
